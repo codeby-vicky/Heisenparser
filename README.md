@@ -1,154 +1,175 @@
-## HeisenParse – WPF-Based Intelligent Code Parsing System
+# HeisenParser – WPF-Based Intelligent Code Parsing & Visualization System
 
-### Project Overview
+## Project Overview
 
-HeisenParse is a Windows desktop–based intelligent code parsing and visualization system developed using the Windows Presentation Foundation (WPF) framework. The project focuses on analyzing source code files, understanding their syntactic structure, and transforming them into an interactive, graph-oriented tree representation. This approach enhances code readability, simplifies debugging, and supports efficient modification of program logic.
+HeisenParser is a Windows desktop–based intelligent code parsing and visualization application developed using **Windows Presentation Foundation (WPF)**. The application is engineered to analyze source code files, extract their syntactic and logical structure, and represent them in the form of an interactive, graph-oriented tree. This visual approach enables deeper understanding, easier debugging, and controlled modification of code logic.
 
-By leveraging WPF and the .NET ecosystem, HeisenParse delivers a high-performance, scalable, and professional-grade desktop application suitable for academic, research, and enterprise-level use.
-
----
-
-### Aim of the Project
-
-The main aim of HeisenParse is to provide a visual and structural interpretation of source code, enabling users to understand and manipulate program logic more effectively. The system is designed to:
-
-* Parse source code and extract its logical structure
-* Represent code as a hierarchical tree instead of linear text
-* Enable real-time synchronization between code and tree
-* Improve learning, debugging, and code maintenance efficiency
+HeisenParser is designed as a developer-focused tool that transforms complex source code into a structured and human-readable format, making it suitable for learning, analysis, and advanced code manipulation workflows.
 
 ---
 
-### Scope of the Project
+## Purpose of the Project
 
-The scope of HeisenParse includes:
+The primary purpose of creating HeisenParser is to **bridge the gap between raw source code and structural understanding**. Traditional code editors present logic linearly, which can be difficult to interpret for large or complex programs. HeisenParser addresses this challenge by converting code into a visual tree-based representation.
 
-* Desktop-based implementation using WPF
-* Tree-based visualization of program structure
-* Two-way synchronization between visual tree and source code
-* Modular architecture for future enhancements such as multi-language support and AI-assisted parsing
+The project was created to:
 
----
-
-### Why WPF Methodology
-
-Windows Presentation Foundation (WPF) is chosen as the development framework due to its advanced UI capabilities and strong architectural support. The WPF methodology offers:
-
-* Rich and flexible user interface design using XAML
-* High-performance rendering for complex visual components
-* Native support for MVVM architecture
-* Strong data binding and command handling mechanisms
-* Seamless integration with C# and .NET libraries
-
-This makes WPF ideal for building a responsive, maintainable, and scalable desktop application like HeisenParse.
+* Improve code comprehension through visual structure
+* Simplify debugging and logical analysis
+* Enable tree-based editing instead of text-only modification
+* Support bidirectional synchronization between code and structure
+* Serve as a foundation for advanced parsing and transformation tools
 
 ---
 
-### System Architecture
+## Why WPF for HeisenParser
 
-The HeisenParse system follows a layered architecture aligned with the MVVM (Model–View–ViewModel) pattern.
+Windows Presentation Foundation (WPF) was chosen as the development framework to deliver a high-performance and feature-rich desktop application. WPF enables:
 
-#### 1. Presentation Layer (WPF View)
+* Rich UI design using XAML
+* Smooth rendering of complex tree and graph structures
+* Real-time data binding and UI updates
+* Clean separation of concerns through MVVM architecture
+* Tight integration with the .NET ecosystem
 
-* Developed using XAML
-* Provides tree view and source code editor
-* Split-screen layout for visual tree and code display
-* Supports theme customization (light and dark modes)
-* Enables real-time node selection and highlighting
+Using WPF allows HeisenParser to operate as a **professional-grade Windows application** capable of handling complex parsing and visualization tasks efficiently.
 
-#### 2. ViewModel Layer
+---
 
-* Acts as a bridge between UI and logic
-* Manages application state and user commands
-* Implements data binding for real-time UI updates
-* Ensures loose coupling between view and logic
+## Key Features
 
-#### 3. Business Logic Layer
+### Source Code Parsing
 
-* Contains the core parsing engine
+* Accepts structured source code files
 * Performs lexical and syntactic analysis
+* Identifies classes, methods, blocks, and control structures
+
+### Tree-Based Visualization
+
+* Represents code structure as a hierarchical graph
+* Expandable and collapsible nodes
+* Clear parent–child relationships for logic flow
+
+### Two-Way Synchronization
+
+* Tree modifications regenerate source code automatically
+* Code edits trigger real-time tree updates
+* Ensures consistency between visual and textual views
+
+### Interactive Editing
+
+* Inline editing of tree nodes
+* Logical validation before applying changes
+* Controlled updates to prevent structural errors
+
+### Extensible Architecture
+
+* Modular parser design
+* Ready for multi-language parsing support
+* Foundation for AI-assisted code understanding
+
+---
+
+## System Architecture
+
+HeisenParser follows a layered architecture aligned with the **MVVM (Model–View–ViewModel)** pattern.
+
+### Presentation Layer (WPF View)
+
+* Built using XAML
+* Split-view interface for tree and code editor
+* Theme-aware UI with clean navigation
+
+### ViewModel Layer
+
+* Manages application state and commands
+* Handles data binding and event coordination
+* Ensures loose coupling between UI and logic
+
+### Business Logic Layer
+
+* Core parsing and analysis engine
 * Generates Abstract Syntax Tree (AST)
-* Handles conversion between tree structure and source code
+* Manages tree-to-code and code-to-tree conversion
 
-#### 4. Data and File Management Layer
+### Data and File Handling Layer
 
-* Handles file upload and storage
-* Supports serialization and deserialization of AST
-* Provides undo and redo operations
-* Manages import and export functionality
-
----
-
-### Functional Modules
-
-#### Code Input and Parsing Module
-
-* Accepts source code files
-* Identifies structural elements such as classes, methods, loops, and conditions
-* Converts source code into a hierarchical structure
-
-#### Tree Visualization Module
-
-* Displays program structure as a graph-based tree
-* Allows node expansion and collapse
-* Enables node-level editing of logic
-
-#### Synchronization Module
-
-* Updates source code when tree nodes are modified
-* Regenerates tree structure when code is edited
-* Maintains consistency between visual and textual views
-
-#### Live Editing and Validation Module
-
-* Allows inline editing of tree nodes
-* Performs real-time syntax validation
-* Prevents invalid structural changes
-
-#### Extensibility Module
-
-* Modular design for adding new language parsers
-* Ready for AI-based syntax understanding
-* Supports future upgrades such as code translation
+* Handles file loading and saving
+* Supports AST serialization and deserialization
+* Manages undo and redo operations
 
 ---
 
-### Technology Stack Used
+## Technology Stack Used
 
-#### Frontend Technologies
+### Frontend
 
 * Windows Presentation Foundation (WPF)
 * XAML for UI layout and styling
 * MVVM architectural pattern
 * Data Binding and Command Pattern
 
-#### Backend and Core Technologies
+### Backend & Core Logic
 
 * C# programming language
-* .NET Framework / .NET Core
-* Custom code parsing engine
+* .NET Framework / .NET
+* Custom parsing engine
 * Abstract Syntax Tree (AST) modeling
-* LINQ for structure traversal and manipulation
+* LINQ for structure traversal and transformation
 
-#### Development and Supporting Tools
+### Development Tools
 
 * Microsoft Visual Studio
 * .NET SDK
 * Git for version control
-* JSON and XML for data serialization
 
 ---
 
-### Advantages of HeisenParse Using WPF
+## Application Release Information
 
-* High-performance desktop application
-* Rich and interactive user interface
-* Clean separation of concerns using MVVM
-* Easy maintenance and scalability
-* Strong integration with Windows and .NET ecosystem
+HeisenParser is officially released as a **Windows desktop application**. Stable and versioned builds are published under the **Releases** section of the project repository.
+
+The release package includes:
+
+* **Executable installer (.exe)** for standard users
+* **MSI installer (.msi)** for managed and enterprise environments
+
+This release strategy ensures ease of installation, consistent updates, and professional distribution standards.
 
 ---
 
-### Conclusion
+## Target Users
 
-HeisenParse, developed using the WPF methodology, is a robust and scalable desktop solution for intelligent code parsing and visualization. By combining WPF’s powerful UI framework with a .NET-based parsing engine, the system enables users to visually understand, edit, and regenerate code efficiently. The project is future-ready and can be extended to support multi-language parsing and AI-driven code analysis in upcoming versions.
+* Software engineering students
+* Developers and programmers
+* Code reviewers and analysts
+* Educators and trainers
+* Research-oriented development teams
+
+---
+
+## Advantages of HeisenParser
+
+* Visual understanding of complex codebases
+* Desktop-grade performance and stability
+* Clean and scalable MVVM-based architecture
+* No dependency on internet connectivity
+* Future-ready design for advanced tooling
+
+---
+
+## Future Enhancements
+
+* Multi-language parsing support
+* AI-assisted syntax and logic analysis
+* Code translation and refactoring tools
+* Advanced graph visualization
+* Plugin-based architecture
+
+---
+
+## Conclusion
+
+HeisenParser is a robust and scalable WPF-based desktop application designed to redefine how source code is analyzed and understood. By combining intelligent parsing with interactive visualization, the project provides a powerful platform for learning, debugging, and transforming code structures.
+
+HeisenParser establishes a strong foundation for next-generation developer tools and advanced programming analysis systems.
