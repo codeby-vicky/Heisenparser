@@ -13,7 +13,7 @@ HeisenParser is designed as a developer-focused tool that transforms complex sou
 The primary purpose of creating HeisenParser is to **bridge the gap between raw source code and structural understanding**. Traditional code editors present logic linearly, which can be difficult to interpret for large or complex programs. HeisenParser addresses this challenge by converting code into a visual tree-based representation.
 
 The project was created to:
-
+ 
 * Improve code comprehension through visual structure
 * Simplify debugging and logical analysis
 * Enable tree-based editing instead of text-only modification
